@@ -1,0 +1,10 @@
+.footer-content {
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    bottom: 0;
+    left: 0;
+    color: rgb(110, 110, 110);
+    padding: 4px;
+}

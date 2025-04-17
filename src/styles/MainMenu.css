@@ -1,0 +1,117 @@
+.first-color-dark {
+    color: #161616;
+}
+.second-color-dark {
+  color: #393E46;
+}
+.third-color-dark {
+  color: #455D7A;
+}
+.fourth-color-dark {
+  color: #0092CA;
+}
+.fifth-color-dark {
+  color: #EFECEC;
+}
+
+.window-button {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #161616;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.window-style {
+    width: 750px;
+    height: 550px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, #161616, #1e1e1f);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+.window-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.barra-superior {
+    background-color: #3d3d3d;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 2%;
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px;
+} 
+
+.intro{
+  font-size: 40px;
+}
+
+.oi {
+  background: linear-gradient(
+    to right,
+    #ff0000,  
+    #ff7f00,  
+    #ffff00,  
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3  
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: arco-iris 2s forwards;
+}
+
+.victor{
+  color: fifth-color-dark;
+}
+
+.intro-div{
+  background-color: rgba(0, 0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: -20px;
+}
+
+.subtext{
+  color: rgb(128, 128, 128);
+}
+
+@keyframes arco-iris {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
