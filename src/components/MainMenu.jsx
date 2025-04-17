@@ -28,7 +28,7 @@ export default function MainMenu() {
         <button className='btn-sobre' onClick={() => openPopup('Sobre mim', <div>conteudo</div>)}><img src="./src/assets/about.png" alt="Sobre"/><p>Sobre</p></button>
         <button className='btn-trabalho' onClick={() => openPopup('Trabalho', <div>conteudo</div>)}><img src="./src/assets/project.png" alt="Trabalho"/><p>Trabalho</p></button>
         <button className='btn-contato' onClick={() => openPopup('Contato', <div>conteudo</div>)}><img src="./src/assets/email.png" alt="Email"/><p>Contatos</p></button>
-        <button className='btn-links' onClick={() => openPopup('Links', <div>conteudo</div>)}><img src="./src/assets/link.png" alt="Links"/><p>Links</p></button>
+        <button className='btn-links' onClick={() => openPopup('Links', <div>conteudo</div>)}><img src="./assets/link.png" alt="Links"/><p>Links</p></button>
       </div>
       {popups.map(popup => (
         <DraggablePopup 
