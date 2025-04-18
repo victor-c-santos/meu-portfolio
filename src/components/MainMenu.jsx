@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '/src/styles/MainMenu.css';
 import DraggablePopup from '/src/components/Popup.jsx';
-import link from '/src/public/images/link.png'
+import link from '/src/assets/link.png'
 
 export default function MainMenu() {
   const [popups, setPopups] = useState([]);
