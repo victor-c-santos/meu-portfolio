@@ -1,0 +1,78 @@
+.toggle-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+.hidden {
+    display: none;
+  }
+  
+.toggle-label {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #facc15;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #f5f5f5;
+    transition: all 0.2s ease;
+    box-shadow: 0px 0px 5px 0px #facc15;
+     
+  }
+  
+.toggle-label:hover {
+    box-shadow: 0px 0px 10px 0px #c99300;
+  }
+
+.checkbox:checked + .toggle-label {
+    border-color: #1f2937;
+    box-shadow: 0px 0px 5px 0px #0c4a6e;
+  }
+  
+.checkbox:checked + .toggle-label:hover {
+    box-shadow: 0px 0px 10px 0px #0c4a6e;
+  }
+
+
+  
+.checkbox:active {
+    box-shadow: 1px 1px 0px 1px #1e1e1e;
+  }
+
+
+  
+
+.icon {
+    position: absolute;
+    width: 48px;
+    height: 92px;
+    top:-16px;
+    left: 4px;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+.icon-on {
+    stroke: #0c4a6e;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+.icon-off {
+    stroke: #facc15;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  
+.checkbox:checked ~ .toggle-label .icon-on {
+    opacity: 1;
+  }
+  
+.checkbox:checked ~ .toggle-label .icon-off {
+    opacity: 0;
+  }

@@ -1,6 +1,6 @@
 .header-elements {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 0;
     width: 100%;
     height: 70px;
@@ -21,19 +21,22 @@
     gap: 20px;
 }   
 
-.portugues {
-    background-color: transparent;
-}
+.botao-idioma {
+  background-color: transparent;
+  border: 0px solid transparent;
+  line-height: 0;
+  border-radius: 0;
+} 
 
-.ingles {
-    background-color: transparent;
+.botao-idioma:hover {
+  transform: scale(1.05);
 }
 
 #checkboxInput {
     display: none;
   }
   
-  .toggleSwitch {
+.toggleSwitch {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +49,7 @@
     transition-duration: .2s;
   }
   
-  .toggleSwitch::after {
+.toggleSwitch::after {
     content: "";
     position: absolute;
     height: 10px;
@@ -59,13 +62,13 @@
     border: 5px solid white;
   }
   
-  #checkboxInput:checked+.toggleSwitch::after {
+#checkboxInput:checked+.toggleSwitch::after {
     transform: translateX(100%);
     transition-duration: .2s;
     background-color: white;
   }
   
-  #checkboxInput:checked+.toggleSwitch {
+#checkboxInput:checked+.toggleSwitch {
     background-color: rgb(148, 118, 255);
     transition-duration: .2s;
   }
