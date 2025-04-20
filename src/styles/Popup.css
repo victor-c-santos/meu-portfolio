@@ -15,8 +15,8 @@
   background-color: rgb(70, 70, 70);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(3, 3, 3, 0.2);
-  min-width: 500px;
-  min-height: 400px;
+  min-width: 400px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   z-index: 100;
@@ -39,6 +39,7 @@
 }
 
 .popup-content {
-  padding: 16px;
+  padding: 10px;
   flex-grow: 1;
+  flex-direction: row;
 }

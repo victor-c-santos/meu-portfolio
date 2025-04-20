@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import '/src/styles/MainMenu.css';
 import DraggablePopup from '/src/components/Popup.jsx';
+import Sobre from '/src/components/Sobre.jsx';
+//import Trabalho from '/src/components/Trabalho.jsx';
+//import Contato from '/src/components/Contato.jsx';
+//import Links from '/src/components/Links.jsx';
 import link from '/src/assets/link.png';
 import email from '/src/assets/email.png';
 import project from '/src/assets/project.png';
@@ -29,7 +33,7 @@ export default function MainMenu() {
       <div className='intro-div'><p className="intro"><span className='oi'>Oi! </span><span className='victor'>Eu sou o Victor!!</span></p></div>
       <div className='subtext'><span>Dev Frontend | QA | Fullstack</span></div>
       <div className="window-content">
-        <button className='btn-sobre' onClick={() => openPopup('Sobre mim', <div>conteudo</div>)}><img src={about} alt="Sobre"/><p>Sobre</p></button>
+        <button className='btn-sobre' onClick={() => openPopup('Sobre mim', <Sobre/>)}><img src={about} alt="Sobre"/><p>Sobre</p></button>
         <button className='btn-trabalho' onClick={() => openPopup('Trabalho', <div>conteudo</div>)}><img src={project} alt="Trabalho"/><p>Trabalho</p></button>
         <button className='btn-contato' onClick={() => openPopup('Contato', <div>conteudo</div>)}><img src={email} alt="Email"/><p>Contatos</p></button>
         <button className='btn-links' onClick={() => openPopup('Links', <div>conteudo</div>)}><img src={link} alt="Links"/><p>Links</p></button>
