@@ -106,7 +106,7 @@ button:focus-visible {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: arco-iris 2s forwards;
+  animation: arco-iris 4s forwards;
 }
 
 .victor{
