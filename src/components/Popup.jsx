@@ -1,7 +1,7 @@
 import { useState, useRef, useLayoutEffect } from 'react';
 import '/src/styles/Popup.css';
 
-const DraggablePopup = ({ title, children, onClose }) => {
+const DraggablePopup = ({ title, children, onClose, contentClassName = "" }) => {
   const popupRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -85,7 +85,7 @@ const DraggablePopup = ({ title, children, onClose }) => {
         <div className="popup-title">{title}</div>
         <button className="popup-close" onClick={handleClose}>[x]</button>
       </div>
-      <div className="popup-content">{children}</div>
+      <div className={'popup-content ' + contentClassName}>{children}</div>
     </div>
   );
 };

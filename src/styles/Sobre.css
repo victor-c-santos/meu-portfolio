@@ -15,7 +15,7 @@
     width: 200px;
 }
 
-.popup-window {
+.sobre-style {
     height: 800px;
     width: 650px;
 }
@@ -35,8 +35,6 @@
     background-color: #3a3a3a;
     border-radius: 10px;
 }
-
-/* Textos */
 
 .texto-apresentacao {
     text-align: left;
