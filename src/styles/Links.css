@@ -1,0 +1,19 @@
+.links-style {
+    height: 300px;
+    width: 400px;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+}
+
+.icon-links {
+    max-width: 48px;
+    max-height: 48px;
+}
