@@ -4,7 +4,7 @@ import DraggablePopup from '/src/components/Popup.jsx';
 import Sobre from '/src/components/Sobre.jsx';
 import Projetos from '/src/components/Projetos.jsx';
 import Links from '/src/components/Links.jsx';
-//import Contato from '/src/components/Contato.jsx';
+import Contato from '/src/components/Contato.jsx';
 import link from '/src/assets/link.png';
 import email from '/src/assets/email.png';
 import project from '/src/assets/project.png';
@@ -36,7 +36,7 @@ export default function MainMenu() {
         <button className='btn-sobre' onClick={() => openPopup('Sobre mim', <Sobre/>, 'sobre-style')}><img src={about} alt="Sobre"/><p>Sobre</p></button>
         <button className='btn-projetos' onClick={() => openPopup('Projetos', <Projetos/>, 'projetos-style')}><img src={project} alt="Projetos"/><p>Projetos</p></button>
         <button className='btn-links' onClick={() => openPopup('Links', <Links/>, 'links-style')}><img src={link} alt="Links"/><p>Links</p></button>
-        <button className='btn-contato' onClick={() => openPopup('Contato', <div>conteudo</div>)}><img src={email} alt="Email"/><p>Contatos</p></button>
+        <button className='btn-contato' onClick={() => openPopup('Contato', <Contato/>, 'contato-style')}><img src={email} alt="Email"/><p>Contatos</p></button>
       </div>
       {popups.map(popup => (
         <DraggablePopup 

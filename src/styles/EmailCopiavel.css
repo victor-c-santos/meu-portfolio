@@ -1,0 +1,27 @@
+.email-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .email-wrapper:hover .tooltip {
+    opacity: 1;
+  }

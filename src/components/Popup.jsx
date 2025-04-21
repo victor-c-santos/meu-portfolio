@@ -70,7 +70,7 @@ const DraggablePopup = ({ title, children, onClose, contentClassName = "" }) => 
 
   return (
     <div
-      className={`popup-window ${isClosing ? 'fade-out' : ''}`}
+      className={`popup-window ${isClosing ? 'fade-out' : ''} ${isDragging ? 'dragging' : ''}`}
       ref={popupRef}
       style={{
         left: `${position.x}px`,

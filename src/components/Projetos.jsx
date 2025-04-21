@@ -39,8 +39,8 @@ export default function Projetos() {
                         <img src={imagemPortfolio} alt="" />
                         <div className="projeto1-texto">
                             <p className="projeto1-titulo">Portfolio</p>
-                            <p className="projeto1-descricao">Página pessoal e portfolio. Este projeto foi feito com React e Node.js.</p>
-                            <button className="btn-projeto1">Voce já está vendo</button>
+                            <p className="projeto1-descricao">Página pessoal também usada como portfólio. Projeto feito com React, JavaScript e HTML/CSS.</p>
+                            <button className="btn-projeto1" onClick={() => window.open("https://github.com/victor-c-santos/meu-portfolio", "_blank")}>Github</button>
                         </div>
                         </div>
                     </div>
