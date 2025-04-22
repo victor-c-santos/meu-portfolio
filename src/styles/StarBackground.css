@@ -26,3 +26,14 @@
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
   }
+
+  .light .starry-background {
+    background: radial-gradient(ellipse at bottom, #f0f0f0 0%, #ffffff 100%);
+    filter: brightness(1.1); /* Aumenta a clareza no modo claro */
+    transition: all 0.5s ease, filter 0.5s ease; /* A transição também afeta o filtro */
+  }
+  
+  .light .star {
+    background: #ffcc00;  /* Estrelas de cor dourada no modo claro */
+    animation: twinkle 3s infinite ease-in-out;
+  }

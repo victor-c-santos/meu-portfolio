@@ -1,4 +1,4 @@
-import Header from '/src/components/Header';
+import LightModeButton from '/src/components/LightModeButton';
 import MainMenu from '/src/components/MainMenu';
 import Footer from '/src/components/Footer';
 import StarBackground from '/src/components/StarBackground';
@@ -7,12 +7,22 @@ import { useEffect, useState } from 'react';
 import '/src/App.css';
 
 export default function App() {
+  const [lightMode, setLightMode] = useState(false);
+
+  useEffect(() => {
+    if (lightMode) {
+      document.body.classList.add('light');
+    } else {
+      document.body.classList.remove('light');
+    }
+  }, [lightMode]);
+
   return (
     <div className="app-container">
       <StarBackground />
       <Astronauta />
       <div className='main-content'>
-        <Header />
+        <LightModeButton lightMode={lightMode} setLightMode={setLightMode}/>
         <main>
           <MainMenu />
         </main>
