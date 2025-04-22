@@ -6,7 +6,7 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at bottom, #0a0e13 0%, #030305 100%);
     overflow: hidden;
     z-index: -1;
     pointer-events: none;
@@ -16,7 +16,7 @@
     position: absolute;
     width: 2px;
     height: 2px;
-    background: white;
+    background: #EFECEC;
     border-radius: 50%;
     opacity: 0;
     animation: twinkle 2s infinite ease-in-out;
@@ -28,9 +28,9 @@
   }
 
   .light .starry-background {
-    background: radial-gradient(ellipse at bottom, #f0f0f0 0%, #ffffff 100%);
-    filter: brightness(1.1); /* Aumenta a clareza no modo claro */
-    transition: all 0.5s ease, filter 0.5s ease; /* A transição também afeta o filtro */
+    background: radial-gradient(ellipse at bottom, #466892 0%, #21214b 100%);
+    filter: brightness(1.1);
+    transition: all 1s ease, filter 1s ease;
   }
   
   .light .star {

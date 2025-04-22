@@ -30,13 +30,13 @@ export default function MainMenu() {
       <div className="barra-superior">
         <span className="window-title">home</span>
       </div>
-      <div className='intro-div'><p className="intro"><span className='oi'>Oi! </span><span className='victor'>Eu sou o Victor!!</span></p></div>
+      <div className='intro-div'><p className="intro"><span className='oi'>Oi! </span><span className='victor'>Eu sou o Victor!</span></p></div>
       <div className='subtext'><span>Dev Frontend | QA | Fullstack</span></div>
       <div className="window-content">
-        <button className='btn-sobre' onClick={() => openPopup('Sobre mim', <Sobre/>, 'sobre-style')}><img src={about} alt="Sobre"/><p>Sobre</p></button>
-        <button className='btn-projetos' onClick={() => openPopup('Projetos', <Projetos/>, 'projetos-style')}><img src={project} alt="Projetos"/><p>Projetos</p></button>
-        <button className='btn-links' onClick={() => openPopup('Links', <Links/>, 'links-style')}><img src={link} alt="Links"/><p>Links</p></button>
-        <button className='btn-contato' onClick={() => openPopup('Contato', <Contato/>, 'contato-style')}><img src={email} alt="Email"/><p>Contatos</p></button>
+        <button className='btn-sobre btn-menu' onClick={() => openPopup('Sobre mim', <Sobre/>, 'sobre-style')}><img src={about} alt="Sobre" className='icon-popups icon-sobre'/><p>Sobre</p></button>
+        <button className='btn-projetos btn-menu' onClick={() => openPopup('Projetos', <Projetos/>, 'projetos-style')}><img src={project} alt="Projetos" className='icon-popups icon-projetos'/><p>Projetos</p></button>
+        <button className='btn-links btn-menu' onClick={() => openPopup('Links', <Links/>, 'links-style')}><img src={link} alt="Links" className='icon-popups icon-links'/><p>Links</p></button>
+        <button className='btn-contato btn-menu' onClick={() => openPopup('Contato', <Contato/>, 'contato-style')}><img src={email} alt="Email" className='icon-popups icon-contato'/><p>Contatos</p></button>
       </div>
       {popups.map(popup => (
         <DraggablePopup 
