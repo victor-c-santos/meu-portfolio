@@ -1,0 +1,28 @@
+.starry-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #2b1b35 0%, #0d090f 100%);
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }

@@ -1,87 +1,89 @@
 .app-container {
-    position: relative;
+  position: relative;
+}
+
+/* Tela de loading */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #242424;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Garante que a tela de loading fique por cima */
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: all; /* Bloqueia interação enquanto visível */
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Libera interação com os outros elementos */
+  z-index: -1; /* Move a tela de loading para o fundo após desaparecer */
+}
+
+/* Animação do loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF #242424;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent #ae00ff #ae00ff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  /* Tela de loading */
-  .loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #242424;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 1;
-    transition: opacity 0.6s ease-in-out;
-    pointer-events: all;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .fade-out {
-    opacity: 0;
-    pointer-events: none;
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  /* Animação do loader */
-  .loader {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    border: 3px solid;
-    border-color: #FFF #FFF #242424;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  100% {
+    transform: rotate(-360deg);
   }
-  .loader::after {
-    content: '';  
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    border: 3px solid;
-    border-color: transparent #ae00ff #ae00ff;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    animation: rotationBack 0.5s linear infinite;
-    transform-origin: center center;
-  }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } 
-      
-  @keyframes rotationBack {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-  
-  /* Conteúdo principal */
-  .main-content {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.8s ease-in-out;
-  }
-  
-  .main-content.fade-in-content {
-    opacity: 1;
-    pointer-events: auto;
-  }
+}
+
+/* Conteúdo principal */
+.main-content {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.main-content.fade-in-content {
+  opacity: 1;
+  pointer-events: auto;
+}
