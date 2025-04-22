@@ -1,18 +1,41 @@
-import Header from './components/Header';
-import MainMenu from './components/MainMenu';
-import Footer from './components/Footer';
-import './App.css';
+import Header from '/src/components/Header';
+import MainMenu from '/src/components/MainMenu';
+import Footer from '/src/components/Footer';
+import { useEffect, useState } from 'react';
+import '/src/App.css';
+import '/src/styles/Loading.css'; // ou onde estiver seu CSS
 
-function App() {
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
   return (
-    <div className="portfolio-container">
-      <Header />
-      <main>
-        <MainMenu />
-      </main>
-      <Footer />
+    <div className="app-container">
+      <div className={`loading-screen ${isLoading ? '' : 'fade-out'}`}>
+        <div className="loader"></div>
+      </div>
+
+      <div className={`main-content ${isLoading ? 'hidden' : 'fade-in-content'}`}>
+        <Header />
+        <main>
+          <MainMenu />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;
