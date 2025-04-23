@@ -10,9 +10,13 @@
 
 .foto-apresentacao {
     border-radius: 50%;
-    border: 2px solid black;
+    border: 3px solid #0a0d11;
     height: 200px;
     width: 200px;
+}
+
+.light .foto-apresentacao {
+    border: 2px solid #1b1b1b;
 }
 
 .sobre-style {
@@ -21,7 +25,7 @@
 }
 
 .conteudo {
-    max-height: 500px;
+    max-height: 550px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -39,6 +43,30 @@
 .texto-apresentacao {
     text-align: left;
     line-height: 1.2;
+}
+
+.light .titulo {
+    color: #202122;
+}
+
+.light .texto-apresentacao {
+    color: #202122;
+}
+
+.light .educacao-texto {
+    color: #202122;
+}
+
+.light .textos {
+    color: #202122;
+}
+
+.light .outros-interesses-texto {
+    color: #202122;
+}
+
+.light .linguas-texto {
+    color: #202122;
 }
 
 .p-nome {
