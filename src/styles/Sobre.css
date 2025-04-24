@@ -36,7 +36,12 @@
 }
 
 .conteudo::-webkit-scrollbar-thumb {
-    background-color: #3a3a3a;
+    background-color: #49505e;
+    border-radius: 10px;
+}
+
+.light .conteudo::-webkit-scrollbar-thumb {
+    background-color: #2c2c2c;
     border-radius: 10px;
 }
 
