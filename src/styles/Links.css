@@ -5,7 +5,7 @@
 
 .botoes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     width: 100%;
@@ -13,7 +13,61 @@
     place-items: center;
 }
 
-.icon-links {
-    max-width: 48px;
-    max-height: 48px;
+.botoes img {
+    width: 92px;
+    height: 92px;
+}
+
+.botoes button {
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s ease-in-out
+}
+
+.botoes button:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out
+}
+
+.icon-links-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.icone-github {
+    filter: drop-shadow( 0 0 12px #FAFBFC);
+}
+.light .icone-github {
+    filter: none
+}
+
+.icone-linkedin {
+    filter: drop-shadow( 0 0 12px #0E76A8);
+}
+.light .icone-linkedin {
+    filter: none
+}
+
+.icone-instagram {
+    filter: drop-shadow( 0 0 12px #833ab4);
+}
+.light .icone-instagram {
+    filter:none
+}
+
+.icone-steam {
+    filter: drop-shadow( 0 0 12px #00ADEE);
+}
+.light .icone-steam {
+    filter: none
+}
+
+.links-texto {
+    color: #e9e9e9;
+    line-height: 0.4;
+}
+
+.light .links-texto {
+    color: #202122;
 }

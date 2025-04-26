@@ -125,11 +125,11 @@
 }
 
 .icon-links {
-  filter: drop-shadow( 0 0 3px rgb(245, 233, 68));
+  filter: drop-shadow( 0 0 3px rgb(245, 68, 68));
   transition: all 0.3s ease-in-out;
 }
 .icon-contato {
-  filter: drop-shadow( 0 0 3px rgb(245, 68, 68));
+  filter: drop-shadow( 0 0 3px rgb(62, 255, 72));
   transition: all 0.3s ease-in-out;
 }
 
@@ -142,11 +142,11 @@
 }
 
 .btn-menu:hover .icon-links {
-  filter: drop-shadow( 0 0 8px rgb(245, 233, 68));
+  filter: drop-shadow( 0 0 8px rgb(245, 68, 68));
 }
 
 .btn-menu:hover .icon-contato {
-  filter: drop-shadow( 0 0 8px rgb(245, 68, 68));
+  filter: drop-shadow( 0 0 8px rgb(62, 255, 72));
 }
 
 .intro{
