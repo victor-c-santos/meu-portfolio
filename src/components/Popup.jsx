@@ -1,5 +1,5 @@
 import { useState, useRef, useLayoutEffect } from 'react';
-import ButtonCloseSound from '/src/components/sons/ButtonCloseSound.jsx'
+import ButtonCloseSound from '/src/components/audio/ButtonCloseSound.jsx'
 import '/src/styles/Popup.css';
 
 const DraggablePopup = ({ title, children, onClose, contentClassName = "" }) => {

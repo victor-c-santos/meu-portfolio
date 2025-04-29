@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '/src/styles/MainMenu.css';
-import ButtonOpenSound from '/src/components/sons/ButtonOpenSound.jsx'
+import ButtonOpenSound from '/src/components/audio/ButtonOpenSound.jsx'
 import DraggablePopup from '/src/components/Popup.jsx';
 import Sobre from '/src/components/Sobre.jsx';
 import Projetos from '/src/components/Projetos.jsx';
