@@ -5,6 +5,7 @@
     left: 20%;  
     transform: translate(-50%, -50%);
     animation: float 5s ease-in-out infinite;
+    user-select: none;
   }
   
   .astronaut img {

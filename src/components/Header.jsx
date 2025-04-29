@@ -1,18 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
 import '/src/styles/Header.css';
-import DarkmodeButton from './DarkmodeButton.jsx';
+import LightmodeButton from './LightModeButton.jsx';
 import brazil from '/src/assets/brazil.png';
 import usa from '/src/assets/usa.png';
 
-// vai ser util no futuro, prometo
 export default function Header() {
     return (
       <header>
         <nav>
           <div className='header-elements'>
             <div className='header-elements-left'>
-              {DarkmodeButton()}
+              {LightmodeButton()}
             </div>
             <div className='header-elements-right'>
               <button href="#ptbr" className='portugues botao-idioma'><img src={brazil} alt="Português"/></button>

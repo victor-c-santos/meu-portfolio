@@ -1,4 +1,5 @@
 import { useState, useRef, useLayoutEffect } from 'react';
+import ButtonCloseSound from '/src/components/sons/ButtonCloseSound.jsx'
 import '/src/styles/Popup.css';
 
 const DraggablePopup = ({ title, children, onClose, contentClassName = "" }) => {
@@ -83,7 +84,7 @@ const DraggablePopup = ({ title, children, onClose, contentClassName = "" }) => 
     >
       <div className="popup-header" onMouseDown={handleMouseDown}>
         <div className="popup-title">{title}</div>
-        <button className="popup-close" onClick={handleClose}>[x]</button>
+        <ButtonCloseSound className="popup-close" onClick={handleClose}>[x]</ButtonCloseSound>
       </div>
       <div className={'popup-content ' + contentClassName}>{children}</div>
     </div>
