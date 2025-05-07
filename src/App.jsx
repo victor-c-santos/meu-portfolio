@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <StarBackground />
+      <StarBackground starCount={100} lightMode={lightMode} />
       <Astronauta />
       <div className='main-content'>
         <LightModeButton lightMode={lightMode} setLightMode={setLightMode}/>

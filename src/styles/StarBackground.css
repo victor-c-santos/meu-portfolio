@@ -1,17 +1,58 @@
-.starry-background {
+  .starry-background {
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(ellipse at bottom, #0a0e13 0%, #030305 100%);
     overflow: hidden;
     z-index: -1;
     pointer-events: none;
   }
+
+  .starry-background::before,
+  .starry-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+  }
+
+/* Camada dark (ativa por padrão) */
+.starry-background::before {
+  background: radial-gradient(
+      ellipse at bottom,
+      #0a0e13 0%,
+      #030305 100%
+  );
+  opacity: 1;
+}
+
+/* Camada light (invisível por padrão) */
+.starry-background::after {
+  background: radial-gradient(
+      ellipse at bottom,
+      #466892 0%,
+      #21214b 100%
+  );
+  opacity: 0;
+  filter: brightness(1.2);
+}
+
+/* Modo light: mostra a camada light e esconde a dark */
+.starry-background.light::before {
+  opacity: 0;
+}
+
+.starry-background.light::after {
+  opacity: 1;
+  z-index: -1
+}
   
+
+
   .star {
     position: absolute;
     width: 2px;
@@ -20,6 +61,13 @@
     border-radius: 50%;
     opacity: 0;
     animation: twinkle 2s infinite ease-in-out;
+    transition: background-color 1s ease, opacity 1s ease;
+  }
+
+  .light .star {
+    background: #ffcc00;
+    width: 2px;
+    height: 2px;
   }
   
   @keyframes twinkle {
@@ -27,12 +75,5 @@
     50% { opacity: 1; }
   }
 
-  .light .starry-background {
-    background: radial-gradient(ellipse at bottom, #466892 0%, #21214b 100%);
-    filter: brightness(1.1);
-  }
-  
-  .light .star {
-    background: #ffcc00;  /* Estrelas de cor dourada no modo claro */
-    animation: twinkle 3s infinite ease-in-out;
-  }
+  /*background: radial-gradient(ellipse at bottom, #0a0e13 0%, #030305 100%);*/
+  /*background: radial-gradient(ellipse at bottom, #466892 0%, #21214b 100%);*/

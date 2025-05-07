@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '/src/styles/StarBackground.css';
 
-const StarBackground = ({ starCount = 100 }) => {
+const StarBackground = ({ starCount = 100, lightMode = false }) => {
   const containerRef = useRef();
 
   useEffect(() => {
@@ -24,7 +24,12 @@ const StarBackground = ({ starCount = 100 }) => {
     };
   }, [starCount]);
 
-  return <div className="starry-background" ref={containerRef}></div>;
+  return (
+    <div 
+      className={`starry-background ${lightMode ? 'light' : ''}`} 
+      ref={containerRef}
+    />
+  );
 };
 
 export default StarBackground;
