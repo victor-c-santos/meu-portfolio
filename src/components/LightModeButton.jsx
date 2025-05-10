@@ -18,8 +18,17 @@ export default function LightmodeButton({ lightMode, setLightMode}) {
   };
 
   return (
-    <button onClick={lightModeHandleClick} className="header-element">
-      {lightMode ? <img src={moon} alt="dark mode"/>: <img src={sun} alt="light mode" />}
-    </button>
+    <label>
+        <input className="toggle-checkbox" type="checkbox" checked={lightMode} onChange={lightModeHandleClick} />
+        <div className="toggle-slot">
+          <div className="sun-icon-wrapper">
+            <div className="iconify sun-icon" data-icon="feather-sun" data-inline="false" />
+          </div>
+          <div className="toggle-button" />
+          <div className="moon-icon-wrapper">
+            <div className="iconify moon-icon" data-icon="feather-moon" data-inline="false" />
+          </div>
+        </div>
+      </label>
   );
 } 

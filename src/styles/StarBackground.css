@@ -20,38 +20,33 @@
     transition: opacity 0.3s ease;
   }
 
-/* Camada dark (ativa por padrão) */
-.starry-background::before {
-  background: radial-gradient(
-      ellipse at bottom,
-      #0a0e13 0%,
-      #030305 100%
-  );
-  opacity: 1;
-}
+  .starry-background::before {
+    background: radial-gradient(
+        ellipse at bottom,
+        #0a0e13 0%,
+        #030305 100%
+    );
+    opacity: 1;
+  }
 
-/* Camada light (invisível por padrão) */
-.starry-background::after {
-  background: radial-gradient(
-      ellipse at bottom,
-      #466892 0%,
-      #21214b 100%
-  );
-  opacity: 0;
-  filter: brightness(1.2);
-}
+  .starry-background::after {
+    background: radial-gradient(
+        ellipse at bottom,
+        #466892 0%,
+        #21214b 100%
+    );
+    opacity: 0;
+    filter: brightness(1.2);
+  }
 
-/* Modo light: mostra a camada light e esconde a dark */
-.starry-background.light::before {
-  opacity: 0;
-}
+  .starry-background.light::before {
+    opacity: 0;
+  }
 
-.starry-background.light::after {
-  opacity: 1;
-  z-index: -1
-}
-  
-
+  .starry-background.light::after {
+    opacity: 1;
+    z-index: -1
+  }
 
   .star {
     position: absolute;
@@ -66,14 +61,9 @@
 
   .light .star {
     background: #ffcc00;
-    width: 2px;
-    height: 2px;
   }
   
   @keyframes twinkle {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
   }
-
-  /*background: radial-gradient(ellipse at bottom, #0a0e13 0%, #030305 100%);*/
-  /*background: radial-gradient(ellipse at bottom, #466892 0%, #21214b 100%);*/
